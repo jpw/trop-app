@@ -1,0 +1,22 @@
+{
+  "name": "trop-app",
+  "version": "0.0.1",
+  "description": "test app for TROP. Not of public interest.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpw/trop-app.git"
+  },
+  "author": "jpw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpw/trop-app/issues"
+  },
+  "homepage": "https://github.com/jpw/trop-app#readme",
+  "dependencies": {
+    "express": "~4.16.4"
+  }
+}
