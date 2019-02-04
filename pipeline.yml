@@ -24,6 +24,15 @@ jobs:
         args:
         - -c
         - |-
+
           export GIT_REVISION=`cat .git/ref`
 
           ./build.sh
+          EXIT_STATUS=$?
+          if [ $EXIT_STATUS != 0 ] ; then
+            exit 1
+          fi
+
+        dir: git
+      inputs:
+      - name: git
