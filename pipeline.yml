@@ -4,12 +4,19 @@ resources:
   source:
     branch: master
     uri: https://github.com/jpw/trop-app.git
+- name: git-docs
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/jpw/trop-docs.git
 jobs:
 - name: build
   serial: true
   plan:
   - aggregate:
     - get: git
+      trigger: true
+    - get: git-docs
       trigger: true
   - task: build
     config:
@@ -36,3 +43,4 @@ jobs:
         dir: git
       inputs:
       - name: git
+      - name: git-docs
