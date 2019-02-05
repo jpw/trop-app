@@ -1,0 +1,9 @@
+---
+applications:
+- name: trop
+  memory: 256M
+  instances: 1
+  host: pd-server
+  command: npm run start
+  path: ./
+  buildpack: nodejs_buildpack
